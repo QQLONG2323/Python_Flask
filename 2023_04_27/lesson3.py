@@ -13,7 +13,7 @@ def index():
     return message
 
 #一. 
-#cmd指令輸入'flask --app lesson3 --debug run --port 5800', 可以隨時更新網頁內容。
+#cmd指令輸入'flask --app lesson3 --debug run', 可以隨時更新網頁內容。
 
 #或是
 
