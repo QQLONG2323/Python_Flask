@@ -10,76 +10,35 @@
         /* X-Small devices (portrait phones, less than 576px)*/
         /* No media query for `xs` since this is the default in Bootstrap*/
         /*Small devices (landscape phones, 576px and up)*/
-        body {
-            background-color: antiquewhite;
-        }
-    
         @media (min-width: 576px) {
-            body {
-                background-color: azure;
-            }
+            
         }
     
         /*Medium devices (tablets, 768px and up)*/
         @media (min-width: 768px) {
-            body {
-                background-color: beige;
-            }
+            
         }
     
         /*Large devices (desktops, 992px and up)*/
         @media (min-width: 992px) {
-            body {
-                background-color: coral;
-            }
+            
         }
     
         /* X-Large devices (large desktops, 1200px and up) */
         @media (min-width: 1200px) {
-            body {
-                background-color: darkcyan;
-            }
+            
         }
     
         /*XX-Large devices (larger desktops, 1400px and up) */
         @media (min-width: 1400px) {
-            body {
-                background-color: darkgrey;
-            }
+           
         }
     </style>
 </head>
 <body>
-    <h1 class="display-1">Bootstrap<small class="text-muted">With faded secondary text</small></h1>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="container-md  bg-success bg-gradient bg-opacity-50" id="root">
+        <h1 class="display-1 text-white">Bootstrap<span> With faded secondary text</span></h1>
+    </div>
     <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 </body>
 
