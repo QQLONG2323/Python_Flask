@@ -10,6 +10,10 @@ def index():
     }
     return render_template("index.jinja.html",content_data=data)
 
-@app.route('/learning/')
-def  learning():
-    return render_template('learning.jinja.html')
+@app.route("/features/")
+def features():
+    return render_template("features.jinja.html")
+
+@app.route("/pricing/")
+def pricing():
+    return render_template("pricing.jinja.html")
