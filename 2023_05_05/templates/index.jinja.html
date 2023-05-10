@@ -1,13 +1,45 @@
 {% extends "base.jinja.html" %}
 
 {% block head %}
-    {{ super() }}
+{{ super() }}
 {% endblock %}
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
 <div class="container-md">
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum inventore, aspernatur hic quibusdam tempora possimus eos nobis delectus incidunt cum voluptate earum velit nostrum magni nihil a provident totam blanditiis reprehenderit, sint eveniet eum maiores odit? Quas amet inventore nostrum laudantium rem similique sapiente ipsum consequatur eos dolores officia recusandae sit dignissimos explicabo voluptatem expedita tempora illo iusto, ducimus natus porro repellendus. Et, ut. Ipsam deserunt delectus nulla reiciendis quia accusantium neque dignissimos, tenetur iure unde quam exercitationem ipsa corporis laboriosam atque ullam reprehenderit iusto illo saepe! Recusandae, blanditiis quam saepe molestiae ipsam voluptas fuga alias. Libero quod expedita vero!
+    <div class="table-responsive" style="max-height: 400px; overflow-y: scroll;">
+        <table class="table caption-top">
+            <caption>聯電</caption>
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>開盤</th>
+                    <th>最高</th>
+                    <th>最低</th>
+                    <th>收盤1</th>
+                    <th>收盤2</th>
+                    <th>成交量</th>
+                </tr>
+    
+            </thead>
+            <tbody>
+                {% for rows in data %}
+                <tr>
+                    {% for item in rows%}
+                        {% if loop.first%}
+                        <td>{{ item }}</td>
+                        {% elif loop.last %}
+                        <td>{{ "{:,d}".format(item) }}</td>
+                        {% else %}
+                        <td>{{ "{:.2f}".format(item) }}</td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
 </div>
 {% endblock %}
