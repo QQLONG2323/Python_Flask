@@ -1,4 +1,9 @@
 '''
+如何使用Python取得歷史股價，簡介yfinance、ffn、FinMind
+https://havocfuture.tw/blog/python-stock-history
+'''
+
+'''
 這是專門取得台灣股市資料
 '''
 import pandas_datareader.data as pdr
@@ -11,4 +16,7 @@ def get_stock_data(stockid):
     yf.pdr_override()
     stockid_str = f'{stockid}.TW'    
     stock_dataFrame = pdr.get_data_yahoo(stockid_str)
-    return stock_dataFrame
+    stock_dataFrame1 = stock_dataFrame.reset_index()
+    stock_dataFrame1['Date'] = stock_dataFrame1['Date'].map(lambda x:f'{x.year}-{x.month}-{x.day}')
+    stock_list = stock_dataFrame1.to_numpy().tolist()
+    return stock_list
