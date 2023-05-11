@@ -25,8 +25,11 @@ def about():
 
 @app.route('/form/', methods=['GET', 'POST'])
 def form():
+    rows = datasource.get_stockid()
     if request.method == 'POST':
-        print(f"{request.form['username']},這是post,您好")
-        return render_template("form.jinja.html")
-    elif request.method  == 'GET':
-        return render_template("form.jinja.html")
+        stock_name = request.form['stock_name']
+        print(stock_name)
+        year =  request.form['year']
+        return render_template("form.jinja.html",rows=rows,stock_name=stock_name,year=year)
+    
+    return render_template("form.jinja.html",rows=rows)
