@@ -12,3 +12,10 @@ pyinstaller your_script_name.py
 pyinstaller your_script_name.spec
 
 4. 在 dist 文件夾中找到可執行文件並運行即可
+
+
+# Supabase是一個開源的後端即服務（Backend-as-a-Service）平台
+- https://supabase.com
+
+# NocoDB是一個開源的低代碼開發平台，用於快速構建和管理數據庫驅動的Web應用程序
+- https://nocodb.com
